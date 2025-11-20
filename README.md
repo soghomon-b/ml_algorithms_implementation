@@ -56,10 +56,15 @@ All modules will be covered with pytest test suites, tests are being added when 
 
 Run tests with:
 ```bash
-pytest test
+pytest
 ```
 
-Additional tests are being implemented gradually as time allows.
+## Status
+
+- ✅ Linear & logistic regression (NumPy): implemented and tested
+- ✅ Simple neural networks (MLPs, regularization helpers): implemented, tests in progress
+- ⚠️ CNN / RNN / GPT modules: experimental / work in progress
+- 🚧 Fine-tuning scripts: initial prototypes for future expansion
 
 ## Installation
 
@@ -79,6 +84,22 @@ Dependencies:
 
 All algorithms expect inputs and targets as `numpy.ndarray` objects. For neural network modules implemented with PyTorch, tensors are internally converted to appropriate floating point types where necessary.
 
+## Example: Linear Regression (GD)
+
+```python
+from src.general_algorithms.linear_regression import LinearRegressionGD
+import numpy as np
+
+X = np.random.randn(200, 3)
+w_true = np.array([1.5, -2.0, 0.7])
+y = X @ w_true + 0.1 * np.random.randn(200)
+
+model = LinearRegressionGD(lr=0.01, n_iters=1000)
+model.fit(X, y)
+
+print("Learned weights:", model.w)
+print("MSE:", model.mse(X, y))
+```
 ## Goals
 
 - Build core machine learning algorithms from scratch for educational purposes  
