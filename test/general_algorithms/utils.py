@@ -1,6 +1,4 @@
 import torch
-import pytest
-from torch import nn
 import numpy as np
 
 def make_toy_binary(n=200, d=8, seed=0, margin=2.0):

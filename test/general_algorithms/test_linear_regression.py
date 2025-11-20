@@ -1,9 +1,9 @@
-import sys, os
+import sys
+import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 import numpy as np
-import pytest
-from src.general_algorithms.linear_regression import LinearRegression, LinearRegressionWithLeastSquares, LinearRegressionWithStochasticGradientDescent, LinearRegressionWithGradientDescent
+from src.general_algorithms.linear_regression import LinearRegression, LinearRegressionWithLeastSquares, LinearRegressionWithGradientDescent
 
 # a dummy subclass since LinearRegression is abstract
 class DummyLinearRegression(LinearRegression):
