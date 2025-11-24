@@ -1,7 +1,6 @@
 # ml-algorithms-implementation
 
-This repository provides implementations of core machine learning algorithms and neural network architectures. The goal is to construct algorithms from first principles using both NumPy and PyTorch, in order to build an educational resource and a reliable codebase with unit tests.
-
+This is my personal space to learn different ML algorithms by specifying, implementing, and testing them.
 ## Project Structure
 
 ```
@@ -21,7 +20,7 @@ src/
     └── GPT.py                         # Transformer decoder (GPT-like)
 ```
 
-Tests live under `test/` and validate correctness of each algorithm. Additional tests are being written accordingly when time permits.
+Tests live under `test/` and validate the correctness of each algorithm. Additional tests are being written accordingly when time permits.
 
 ## Features
 
@@ -36,7 +35,7 @@ Tests live under `test/` and validate correctness of each algorithm. Additional 
   - Cross-entropy loss, GD and SGD variants
 
 ### Neural Networks
-- **Simple NNs**  
+- **Simple NNs**  (tested)
   - Logistic Regression (PyTorch)  
   - Single-layer MLP  
   - Deep Neural Networks (DNNs)  
@@ -52,12 +51,7 @@ Tests live under `test/` and validate correctness of each algorithm. Additional 
 
 ## Tests
 
-All modules will be covered with pytest test suites, tests are being added when time permits
-
-Run tests with:
-```bash
-pytest
-```
+All modules will be covered with pytest test suites, and tests are being added when time permits
 
 ## Status
 
@@ -68,10 +62,10 @@ pytest
 
 ## Installation
 
-Clone the repository and install in editable mode:
+You are welcome to use this repo for ethical and scientific purposes. Clone the repository by running;
 
 ```bash
-git clone https://github.com/<your-username>/ml-algorithms-implementation.git
+git clone https://github.com/soghomon-n/ml-algorithms-implementation.git
 ```
 
 Dependencies:
@@ -82,7 +76,7 @@ Dependencies:
 
 ## Usage
 
-All algorithms expect inputs and targets as `numpy.ndarray` objects. For neural network modules implemented with PyTorch, tensors are internally converted to appropriate floating point types where necessary.
+All algorithms expect inputs and targets as `numpy.ndarray` objects. For neural network modules implemented with PyTorch, tensors are internally converted to appropriate floating-point types where necessary.
 
 ## Example: Linear Regression (GD)
 
@@ -102,10 +96,10 @@ print("MSE:", model.mse(X, y))
 ```
 ## Goals
 
-- Build core machine learning algorithms from scratch for educational purposes  
-- Provide PyTorch equivalents for neural network architectures  
-- Ensure correctness through unit testing  
-- Extend into advanced deep learning architectures including CNNs, RNNs, and Transformers with fine-tuning  
+- Build core machine learning algorithms from scratch to help me understand them more. 
+- Provide PyTorch equivalents for neural network architectures.
+- Ensure correctness through unit testing.
+- Extend into advanced deep learning architectures, including CNNs, RNNs, and Transformers with fine-tuning.
 
 ## License
 
